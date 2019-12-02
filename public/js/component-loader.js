@@ -1,11 +1,19 @@
-$(document).ready(function () {
+function sendRequest(url, cb) {
+    const Http = new XMLHttpRequest();
+    Http.open("GET", url);
+    Http.send();
 
-    $.get('/components/nav.html', function (html) {
-        $('#nav-holder').html(html)
-    })
+    Http.onreadystatechange = (e) => {
+        cb(Http.responseText);
+    }
+}
 
-    $.get('/components/footer.html', function (html) {
-        $('#footer-holder').html(html)
-    })
+sendRequest('/components/nav.html', function (html) {
+    document.getElementById('nav-holder').innerHTML = html
+})
 
-});
+sendRequest('/components/footer.html', function (html) {
+    document.getElementById('footer-holder').innerHTML = html
+})
+
+
