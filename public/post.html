@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MCSS</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src ="js/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="js/component-loader.js"></script>
+</head>
+<body>
+
+<div id="nav-holder"></div>
+
+<div id="article" style="border: 1px solid gray; margin: 10px; padding: 5px">
+If you're seeing this, it means that the shit has not loaded yet
+</div>
+
+
+<div id="footer-holder"></div>
+
+</body>
+
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/showdown@1.9.0/dist/showdown.min.js"></script>
+<script>
+    var converter = new showdown.Converter();
+    var urlParams = getUrlVars();
+
+    if (Object.keys(urlParams).indexOf('page') != -1) {
+
+        $.get(urlParams['page'], function (text) {
+            var html = converter.makeHtml(text);
+
+            $('#article').html(html)
+        })
+
+    }
+</script>
+
+</html>
