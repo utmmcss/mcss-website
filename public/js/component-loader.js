@@ -4,16 +4,22 @@ function sendRequest(url, cb) {
     Http.send();
 
     Http.onreadystatechange = (e) => {
+
         cb(Http.responseText);
+
     }
 }
 
 sendRequest('/components/nav.html', function (html) {
-    document.getElementById('nav-holder').innerHTML = html
+    if (html.length && document.getElementById('nav-holder')) {
+        document.getElementById('nav-holder').outerHTML = html
+    }
 })
 
 sendRequest('/components/footer.html', function (html) {
-    document.getElementById('footer-holder').innerHTML = html
+    if (html.length && document.getElementById('footer-holder')) {
+        document.getElementById('footer-holder').outerHTML = html
+    }
 })
 
 
