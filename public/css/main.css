@@ -1,3 +1,41 @@
+/* General */
+.spacer {
+    height: 50%;
+}
+.tint {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Content */
+.cover {
+    background-position: center !important;
+    background-size: cover !important;
+    height: 70vh;
+    margin-bottom: 50px;
+}
+.cover-content {
+    color: white;
+    text-align: center;
+    transform: translateY(-50%);
+}
+.content-section {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    text-align: center;
+}
+.img-divider {
+    height: 300px;
+    background-position: center !important;
+    background-size: cover !important;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
 /* Navbar overlay */
 .overlay a {
     color:white;

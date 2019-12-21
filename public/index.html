@@ -5,7 +5,8 @@
   <title>MCSS</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-
+  
+  <!-- Global stylesheet and component loader -->
   <script src="/js/component-loader.js"></script>
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
@@ -19,13 +20,13 @@
 
 <!-- Start custom content -->
 
-<div style="background: url('img/samplebg.jpg'); background-position: center; background-size: cover; height: 70vh">
+<section id="cover" style="background: url('img/samplebg.jpg')" class="cover">
 
-  <div style="height: 100%; width: 100%; background: rgba(0, 0, 0, 0.5)">
+  <div class="tint">
 
-    <div style="height: 50%"></div>
+    <div class="spacer"></div>
 
-    <div style="color: white; text-align: center; transform: translateY(-50%)">
+    <div class="cover-content">
 
       <h1>MCSS</h1>
     </div>
@@ -33,7 +34,34 @@
 
   </div>
 
-</div>
+</section>
+
+<section id="about" class="content-section">
+
+  <h1>About</h1>
+
+  <p>Idk, we like to code and stuff.</p>
+
+</section>
+
+<section class="img-divider" style="background: url('img/jonathan.jpg')" >
+  <div class="tint"></div>
+</section>
+
+<section id="stuff" class="content-section">
+
+  <h1>Stuff1</h1>
+
+  <p>Idk, we like to code and stuff.</p>
+
+</section>
+<section id="stuff2" class="content-section">
+
+  <h1>Stuff2</h1>
+
+  <p>Idk, we like to code and stuff.</p>
+
+</section>
 
 <!--
 <a href="post.html?page=/blogs/general/welcome-package/">Cool blog!</a>
@@ -46,6 +74,7 @@
 
 </body>
 
+<!-- Global JavaScript -->
 <script src="/js/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
 <script src="/js/nav.js"></script>
 <script src="/js/main.js"></script>
