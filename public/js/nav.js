@@ -1,5 +1,33 @@
 $(document).ready(function () {
 
+    $("#toggle-navbar").on("click",function(){
+        toggleOverlay();
+    });
+
+    $('a.overlayLink').click(function () {
+        toggleOverlay();
+    });
+
+    function toggleOverlay() {
+        $("#navham").toggleClass("is-active");
+        if($("#navham").hasClass("is-active")){
+            openOverlay();
+        } else{
+            closeOverlay();
+        }
+    }
+
+    function openOverlay() {
+        $(".overlay").css({left: "0"});
+        $("html").css({"overflow-y": "hidden"});
+    }
+
+    function closeOverlay() {
+        $("#navham").removeClass("is-active");
+        $(".overlay").css({left: "-100%"});
+        $("html").css({"overflow-y": "visible"});
+    }
+
     function updateScroll(position) {
         console.log(position)
 
@@ -32,31 +60,3 @@ $(document).ready(function () {
 
     updateScroll('top');
 });
-
-$("#toggle-navbar").on("click",function(){
-    toggleOverlay();
-});
-
-$('a.overlayLink').click(function () {
-    toggleOverlay();
-});
-
-function toggleOverlay() {
-    $("#navham").toggleClass("is-active");
-    if($("#navham").hasClass("is-active")){
-        openOverlay();
-    } else{
-        closeOverlay();
-    }
-}
-
-function openOverlay() {
-    $(".overlay").css({left: "0"});
-    $("html").css({"overflow-y": "hidden"});
-}
-
-function closeOverlay() {
-    $("#navham").removeClass("is-active");
-    $(".overlay").css({left: "-100%"});
-    $("html").css({"overflow-y": "visible"});
-}
