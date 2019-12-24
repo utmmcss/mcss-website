@@ -47,8 +47,3 @@ Visit this link on your computer (doesn’t work on mobile) <http://tiny.cc/utm-
 ####Need help?
 Arsala Bangash: <arsala.bangash@mail.utoronto.ca> <br>
 Can help with: Android, Web, Self Transcendence :p 
-
-![Penguin](BLOGROOT/img/penguin.png)
-![Penguin](BLOGROOT/img/penguin.png)
-![Penguin](BLOGROOT/img/penguin.png)
-

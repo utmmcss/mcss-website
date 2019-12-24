@@ -27,7 +27,7 @@ $(document).ready(function () {
         handler: function(direction) {
             updateScroll(direction == 'down' ? 'body' : 'top');
         },
-        offset: '-20%'
+        offset: '-20px'
     })
 
     updateScroll('top');
@@ -51,12 +51,12 @@ function toggleOverlay() {
 }
 
 function openOverlay() {
-    $(".overlay").css({top: "0"});
+    $(".overlay").css({left: "0"});
     $("html").css({"overflow-y": "hidden"});
 }
 
 function closeOverlay() {
     $("#navham").removeClass("is-active");
-    $(".overlay").css({top: "-100%"});
+    $(".overlay").css({left: "-100%"});
     $("html").css({"overflow-y": "visible"});
 }
