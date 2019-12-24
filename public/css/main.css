@@ -1,4 +1,9 @@
 /* General */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+* {
+    font-family: Montserrat;
+}
+
 .spacer {
     height: 50%;
 }
@@ -8,17 +13,34 @@
     background: rgba(0, 0, 0, 0.5);
 }
 
+/* Navbar */
+#main-nav {
+    transition: 0.3s;
+}
+.nav-active {
+    background: rgba(0, 0, 0, 0.9) !important;
+}
+.nav-top {
+    background: none !important;
+}
+
 /* Content */
 .cover {
     background-position: center !important;
     background-size: cover !important;
-    height: 70vh;
+    height: 90vh;
     margin-bottom: 50px;
+}
+.minor-cover {
+    height: 30vh !important;
 }
 .cover-content {
     color: white;
     text-align: center;
     transform: translateY(-50%);
+}
+.cover-content h1 {
+    font-size: 5em;
 }
 .content-section {
     padding-left: 50px;
@@ -83,4 +105,27 @@
     padding-right: 2px;
 
     list-style-type: none;
+}
+
+/* Post */
+#article {
+    text-align: left
+}
+
+#article img {
+    max-width: 700px;
+    border: solid 1px grey;
+}
+
+/* Smaller Screens */
+@media screen and (max-width:720px){
+
+    .content-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #article img {
+        max-width: 90vw;
+    }
 }

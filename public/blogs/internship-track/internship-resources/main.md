@@ -75,7 +75,7 @@ Simplify all aspects of searching and applying for internships.
 Website Link: <https://www.techinternship.io>
 
 
-**NOTE: If you are a freshman or sophomore you should consider applying to internship programs that are exclusively for you. Here is a list of some of these programs.<br> <https://www.wellesley.edu/careereducation/resources/technology-internships-first-years-and-sophomores>**
+**NOTE: If you are a freshman or sophomore you should consider applying to internship programs that are exclusively for you. Here is a list of some of [these programs](https://www.wellesley.edu/careereducation/resources/technology-internships-first-years-and-sophomores).**
 
 ##Other Resources:
 * <https://github.com/elaine-zheng/summer2020internships>
@@ -128,7 +128,7 @@ Gives excellent strategies for tackling interview questions
 An abundance of interview problems separated by topic and difficulty
 The author gives 7 steps to solving problems. Treat these as your technical interview 7 commandments
 
-Google Drive Link: <https://drive.google.com/open?id=0B-MBcN5r-cfpajVCN0JRM0duQWM>
+[Google Drive Link](https://drive.google.com/open?id=0B-MBcN5r-cfpajVCN0JRM0duQWM)
 
 ###Hackerrank Cracking the Coding Interview
 
@@ -136,8 +136,7 @@ This is a Youtube playlist that complements the CTCI book.
 * The author goes over interview strategies
 * You can follow along as the author solves interview questions
 
-Youtube link:
-<https://www.youtube.com/watch?v=GKgAVjJxh9w&list=PLOuZYwbmgZWXvkghUyMLdI90IwxbNCiWK&index=1>
+[Youtube link] (https://www.youtube.com/watch?v=GKgAVjJxh9w&list=PLOuZYwbmgZWXvkghUyMLdI90IwxbNCiWK&index=1)
 
 ###Picking a programming language
 * Pick the programming language you are most familiar with. We recommend python. 
