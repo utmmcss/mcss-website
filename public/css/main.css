@@ -3,6 +3,9 @@
 * {
     font-family: Montserrat;
 }
+h1, h2 {
+    font-family: "Montserrat SemiBold" !important;
+}
 
 .spacer {
     height: 50%;
@@ -33,6 +36,9 @@
 }
 .minor-cover {
     height: 30vh !important;
+}
+.medium-cover {
+    height: 50vh !important;
 }
 .cover-content {
     color: white;
@@ -105,6 +111,42 @@
     padding-right: 2px;
 
     list-style-type: none;
+}
+
+/* Events */
+.event-object {
+    border: 1px solid white;
+    min-height: 60px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+}
+
+.event-object:hover {
+    transform: scale(1.01);
+}
+
+.event-column {
+    max-width: 900px;
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.past-event-object {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+}
+.past-event-date {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: #FC8865;
+    color: white;
+}
+.past-event-content {
+    text-align: left;
 }
 
 /* Post */
