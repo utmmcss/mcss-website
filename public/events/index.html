@@ -120,7 +120,7 @@
   * | |- UID of people with write access
   * |-/events/
   *   |-x : {
-  *     title
+  *     name
   *     location
   *     about
   *     time/date
@@ -129,16 +129,18 @@
   *
   * */
 
-
-
   var db = firebase.firestore();
   db.collection('events').get().then(function (snapshot) {
+
+    for (var d in snapshot) {
+        console.log(d)
+    }
+
     var currentEvents = [];
     var pastEvents = [{
       'name': 'Firebase Tech Talk',
       'date': 'Nov 69'
     }];
-
 
     var currentEventsHTML = '';
     var pastEventsHTML = '';
@@ -149,14 +151,14 @@
 
       pastEventsHTML += "<div class=\"row event-object past-event-object\">\n" +
         "      <div class=\"col-md-10 past-event-content\">" +
-        "        <h2>" +
+        "        <div class='spacer'></div><h2 class='unspace'>" +
         event['name'] +
         "        </h2>" +
         "      </div>" +
         "      <div class=\"col-md-2 past-event-date\">" +
-        "        <h2>" +
+        "        <h3>" +
         event['date'] +
-        "        </h2>" +
+        "        </h3>" +
         "      </div>" +
         "    </div>" +
         "    "

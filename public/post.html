@@ -80,7 +80,8 @@
 
         }).fail(function () {
 
-            $('#article').html('Sorry, that page couldn\'t be found.')
+            $('#article').html('<div style="text-align: center;"><h1>Sorry, that page couldn\'t be found.</h1></div>')
+            document.location.replace('/404.html')
         })
 
     }

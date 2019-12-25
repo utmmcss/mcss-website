@@ -3,12 +3,15 @@
 * {
     font-family: Montserrat;
 }
-h1, h2 {
+h1, h2, h3, h4, h5 {
     font-family: "Montserrat SemiBold" !important;
 }
 
 .spacer {
     height: 50%;
+}
+.unspace {
+    transform: translateY(-50%);
 }
 .tint {
     height: 100%;
@@ -145,6 +148,10 @@ h1, h2 {
     background: #FC8865;
     color: white;
 }
+.past-event-date h3 {
+    margin: auto;
+    padding: 5px;
+}
 .past-event-content {
     text-align: left;
 }
@@ -169,5 +176,9 @@ h1, h2 {
 
     #article img {
         max-width: 90vw;
+    }
+
+    .past-event-content {
+        text-align: center !important;
     }
 }
