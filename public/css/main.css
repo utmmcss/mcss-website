@@ -118,7 +118,6 @@ h1, h2, h3, h4, h5 {
 
 /* Events */
 .event-object {
-    border: 1px solid white;
     min-height: 60px;
     padding: 20px;
     margin-bottom: 20px;
@@ -128,6 +127,31 @@ h1, h2, h3, h4, h5 {
 
 .event-object:hover {
     transform: scale(1.01);
+}
+.upcoming-event-object {
+    padding: 0 !important;
+    height: 200px;
+}
+.upcoming-event-left {
+    width: calc(100% - 150px);
+    height: 100%;
+    display: inline-block;
+}
+.upcoming-event-right {
+    width: 150px;
+    height: 100%;
+    float: right;
+    display: inline-block;
+    color: white;
+}
+.upcoming-event-trapezoid {
+    border-bottom: 200px solid #FC8865;
+    border-left: 40px solid transparent;
+    height: 100%;
+    width: 150px;
+}
+.upcoming-event-trapezoid-content {
+    height: 200px;
 }
 
 .event-column {

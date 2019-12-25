@@ -1,6 +1,8 @@
 $(document).ready(function () {
 
-    $("#toggle-navbar").on("click",function(){
+    console.log('Document is loaded!');
+
+    $("#navham").on("click",function(){
         toggleOverlay();
     });
 

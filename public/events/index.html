@@ -47,25 +47,48 @@
 
   <div id="upcoming-events-holder" class="row event-column">
 
-    <div class="col-md-12 event-object">
-
-      <h2>Loading...</h2>
-
+    <div class="col-md-12">
+        <div class="event-object">
+            <h2>Loading...</h2>
+        </div>
     </div>
 
-
-<!--
+    <!-- Upcoming event object -->
     <div class="col-md-6">
-      <div class="event-object">
+      <div class="event-object upcoming-event-object">
+        <!-- Left side-->
+        <div class="upcoming-event-left">
+            <div class="spacer"></div>
+            <div class="unspace">
+                <h2>
+                    Firebase Chat
+                </h2>
+                <p>
+                    Learn some cool stuff
+                </p>
+            </div>
 
-        <div style="">
-          asd
         </div>
 
-      </div>
+        <!-- Right side-->
+        <div class="upcoming-event-right">
+            <div class="upcoming-event-trapezoid">
+                <div class="upcoming-event-trapezoid-content">
+                    <div class="spacer"></div>
+                    <div class="unspace">
+                        <h2>
+                            Nov 69
+                        </h2>
+                        <p>
+                           @ IB 420
+                        </p>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+      </div>
     </div>
--->
 
   </div>
 
@@ -140,6 +163,18 @@
     var pastEvents = [{
       'name': 'Firebase Tech Talk',
       'date': 'Nov 69'
+    },{
+        'name': 'Firebase Tech Talk',
+        'date': 'Nov 69'
+    },{
+        'name': 'Firebase Tech Talk',
+        'date': 'Nov 69'
+    },{
+        'name': 'Firebase Tech Talk',
+        'date': 'Nov 69'
+    },{
+        'name': 'Firebase Tech Talk',
+        'date': 'Nov 69'
     }];
 
     var currentEventsHTML = '';
