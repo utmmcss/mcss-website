@@ -1,5 +1,5 @@
 /* General */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
 * {
     font-family: Montserrat;
 }
@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5 {
 .overlay-list {
     z-index: 950;
     text-align: center;
-    font: 300 2em 'Lato';
+    font: 300 2em 'Montserrat SemiBold';
 
     width: 90em;
 
