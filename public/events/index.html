@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MCSS</title>
+    <meta charset="UTF-8">
+    <title>MCSS</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-  
-  <!-- Global stylesheet and component loader -->
-  <script src="/js/component-loader.js"></script>
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/hamburger.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+    <!-- Global stylesheet and component loader -->
+    <script src="/js/component-loader.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/hamburger.css">
 
 </head>
 <body>
@@ -22,55 +23,55 @@
 
 <section id="cover" style="background: url('/img/samplebg.jpg')" class="cover medium-cover">
 
-  <div class="tint">
+    <div class="tint">
 
-    <div class="spacer"></div>
+        <div class="spacer"></div>
 
-    <div class="cover-content">
+        <div class="cover-content">
 
-      <h1>
-          ARROW ARCHERY
-      </h1>
+            <h1>
+                ARROW ARCHERY
+            </h1>
 
 
-      <button type="button" class="btn btn-warning">BUY TICKET</button>
+            <button type="button" class="btn btn-warning">BUY TICKET</button>
+        </div>
+
+
     </div>
-
-
-  </div>
 
 </section>
 
 <section id="upcoming-events" class="content-section">
 
-  <h2>UPCOMING EVENTS</h2>
+    <h2>UPCOMING EVENTS</h2>
 
-  <div id="upcoming-events-holder" class="row event-column">
+    <div id="upcoming-events-holder" class="row event-column">
 
-    <div class="col-md-12">
-        <div class="event-object">
-            <h2>Loading...</h2>
+        <div class="col-md-12">
+            <div class="event-object">
+                <h2>Loading...</h2>
+            </div>
         </div>
+
+
     </div>
-
-
-  </div>
 
 </section>
 
 
 <section id="past-events" class="content-section">
 
-  <h2>PAST EVENTS</h2>
+    <h2>PAST EVENTS</h2>
 
-  <div id="past-events-holder" class="event-column">
-    <div class="event-object past-event-object">
+    <div id="past-events-holder" class="event-column">
+        <div class="event-object past-event-object">
 
-      <h2>Loading...</h2>
+            <h2>Loading...</h2>
+
+        </div>
 
     </div>
-
-  </div>
 
 </section>
 
@@ -82,11 +83,16 @@
 
 <!-- Global JavaScript -->
 <script src="/js/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+        crossorigin="anonymous"></script>
 <script src="/js/nav.js"></script>
 <script src="/js/main.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
 <!-- Custom JavaScript -->
 
@@ -100,148 +106,153 @@
 
 <script>
 
-  /*
-  * Database schema
-  *
-  * /-/admin/
-  * | |- UID of people with write access
-  * |-/events/
-  *   |-x : {
-  *     name
-  *     location
-  *     description
-  *     time/date
-  *     link
-  *   }
-  *
-  * */
+    /*
+    * Database schema
+    *
+    * /-/admin/
+    * | |- UID of people with write access
+    * |-/events/
+    *   |-x : {
+    *     name
+    *     location
+    *     description
+    *     time/date
+    *     link
+    *   }
+    *
+    * */
 
-  var db = firebase.firestore();
-  db.collection('events').get().then(function (snapshot) {
+    const numToMonth = [
+        'JAN',
+        'FEB',
+        'MAR',
+        'APR',
+        'MAY',
+        'JUN',
+        'JUL',
+        'AUG',
+        'SEP',
+        'OCT',
+        'NOV',
+        'DEC'
+    ];
 
-    for (var d in snapshot) {
-        console.log(d)
-    }
+    var db = firebase.firestore();
+    db.collection('events').get().then(function (snapshot) {
 
-    var upcomingEvents = [{
-        'name': 'Firebase Tech Talk',
-        'date': 'Nov 69'
-    },{
-        'name': 'Firebase Tech Talk',
-        'date': 'Nov 69'
-    },{
-        'name': 'Firebase Tech Talk',
-        'date': 'Nov 69'
-    },{
-        'name': 'Firebase Tech Talk',
-        'date': 'Nov 69'
-    },{
-        'name': 'Firebase Tech Talk',
-        'date': 'Nov 69'
-    }];
-    var pastEvents = [{
-      'name': 'Firebase Tech Talk',
-      'date': 'Nov 69'
-    },{
-        'name': 'Firebase Tech Talk',
-        'date': 'Nov 69'
-    },{
-        'name': 'Firebase Tech Talk',
-        'date': 'Nov 69'
-    },{
-        'name': 'Firebase Tech Talk',
-        'date': 'Nov 69'
-    },{
-        'name': 'Firebase Tech Talk',
-        'date': 'Nov 69'
-    }];
+        var rawEvents = snapshot.docs.map(doc => {
+            return doc.data();
+        });
 
-    var upcomingEventsHTML = '';
-    var pastEventsHTML = '';
+        console.log(rawEvents);
 
-    for (var p in pastEvents) {
+        var upcomingEvents = [];
+        var pastEvents = [];
 
-      var event = pastEvents[p];
+        for (var i in rawEvents) {
+            var e = rawEvents[i];
+            var eDate = new Date(e['timestamp']);
 
-      pastEventsHTML += "<div class=\"row event-object past-event-object\">\n" +
-        "      <div class=\"col-md-10 past-event-content\">\n" +
-        "        <div class='spacer'></div><h2 class='unspace'>\n" +
-        event['name'] +
-        "        </h2>\n" +
-        "      </div>\n" +
-        "      <div class=\"col-md-2 past-event-date\">\n" +
-        "        <h3>\n" +
-        event['date'] +
-        "        </h3>\n" +
-        "      </div>\n" +
-        "    </div>\n"
-    }
+            e['date'] = numToMonth[eDate.getMonth()] + '<br>' + eDate.getDate();
 
-    for (var u in upcomingEvents) {
+            // Past event
+            if (e['timestamp'] + 3600000 < new Date().getTime()) { // 1 hour grace for people finding the event during it
 
-      var event = upcomingEvents[u];
-      var colWidth = 6;
+                pastEvents.push(e);
 
-      if (upcomingEvents.length % 2 != 0 && u == upcomingEvents.length - 1) {
-          colWidth = 12;
-      }
+            } else { // Upcoming event
+                upcomingEvents.push(e);
+            }
+        }
 
-      upcomingEventsHTML += "<div class=\"col-md-" + colWidth+ "\">\n" +
-          "      <div class=\"event-object upcoming-event-object\">\n" +
-          "        <!-- Left side-->\n" +
-          "        <div class=\"upcoming-event-left\">\n" +
-          "            <div class=\"spacer\"></div>\n" +
-          "            <div class=\"unspace\">\n" +
-          "                <h2>\n" +
-          event['name'] +
-          "                </h2>\n" +
-          "                <p>\n" +
-          event['description'] +
-          "                </p>\n" +
-          "            </div>\n" +
-          "\n" +
-          "        </div>\n" +
-          "\n" +
-          "        <!-- Right side-->\n" +
-          "        <div class=\"upcoming-event-right\">\n" +
-          "            <div class=\"upcoming-event-trapezoid\">\n" +
-          "                <div class=\"upcoming-event-trapezoid-content\">\n" +
-          "                    <div class=\"spacer\"></div>\n" +
-          "                    <div class=\"unspace\">\n" +
-          "                        <h2>\n" +
-          event['date'] +
-          "                        </h2>\n" +
-          "                        <p>\n" +
-          event['location'] +
-          "                        </p>\n" +
-          "                    </div>\n" +
-          "\n" +
-          "                </div>\n" +
-          "            </div>\n" +
-          "        </div>\n" +
-          "      </div>\n" +
-          "    </div>"
-    }
+        var upcomingEventsHTML = '';
+        var pastEventsHTML = '';
 
-    if (pastEvents.length == 0) {
-        $('#past-events').style({'display': none})
-    } else {
-        $('#past-events-holder').html(pastEventsHTML);
-    }
+        for (var p in pastEvents) {
 
-    if (upcomingEvents.length == 0) {
-        $('#upcoming-events-holder').html("    <div class=\"col-md-12\">\n" +
-            "        <div class=\"event-object\">\n" +
-            "            <h2>No events found :(</h2>\n" +
-            "        </div>\n" +
-            "    </div>\n")
-    } else {
-        $('#upcoming-events-holder').html(upcomingEventsHTML);
-    }
+            var event = pastEvents[p];
+
+            pastEventsHTML += "<div class=\"row event-object past-event-object\">\n" +
+                "      <div class=\"col-md-10 past-event-content\">\n" +
+                "        <div class='spacer'></div><h2 class='unspace'>\n" +
+                event['name'] +
+                "        </h2>\n" +
+                "      </div>\n" +
+                "      <div class=\"col-md-2 past-event-date\">\n" +
+                "        <h3>\n" +
+                event['date'] +
+                "        </h3>\n" +
+                "      </div>\n" +
+                "    </div>\n"
+        }
+
+        for (var u in upcomingEvents) {
+
+            var event = upcomingEvents[u];
+            var colWidth = 6;
+
+            if (upcomingEvents.length % 2 != 0 && u == upcomingEvents.length - 1) {
+                colWidth = 12;
+            }
+
+            upcomingEventsHTML += "<div class=\"col-md-" + colWidth + "\">\n" +
+                "      <div class=\"event-object upcoming-event-object\">\n" +
+                "        <!-- Left side-->\n" +
+                "        <div class=\"upcoming-event-left\">\n" +
+                "            <div class=\"spacer\"></div>\n" +
+                "            <div class=\"unspace\">\n" +
+                "                <h2>\n" +
+                event['name'] +
+                "                </h2>\n" +
+                "                <p>\n" +
+                (event['description'] ? event['description'] : '') +
+                "                </p>\n" +
+                (event['link'] ? ("            <a href='" + event['link'] +"' target='_blank'>" +
+                "<button type=\"button\" class=\"btn btn-warning\">BUY TICKET</button>" +
+                "</a>") : "") +
+                "            </div>\n" +
+                "\n" +
+                "        </div>\n" +
+                "\n" +
+                "        <!-- Right side-->\n" +
+                "        <div class=\"upcoming-event-right\">\n" +
+                "            <div class=\"upcoming-event-trapezoid\">\n" +
+                "                <div class=\"upcoming-event-trapezoid-content\">\n" +
+                "                    <div class=\"spacer\"></div>\n" +
+                "                    <div class=\"unspace\">\n" +
+                "                        <h2>\n" +
+                event['date'] +
+                "                        </h2>\n" +
+                "                        <p>\n" +
+                (event['location'] ? ('@ ' + event['location']) : '') +
+                "                        </p>\n" +
+                "                    </div>\n" +
+                "\n" +
+                "                </div>\n" +
+                "            </div>\n" +
+                "        </div>\n" +
+                "      </div>\n" +
+                "    </div>"
+        }
+
+        if (pastEvents.length == 0) {
+            $('#past-events').hide()
+        } else {
+            $('#past-events-holder').html(pastEventsHTML);
+        }
+
+        if (upcomingEvents.length == 0) {
+            $('#upcoming-events-holder').html("    <div class=\"col-md-12\">\n" +
+                "        <div class=\"event-object\">\n" +
+                "            <h2>No events found :(</h2>\n" +
+                "        </div>\n" +
+                "    </div>\n")
+        } else {
+            $('#upcoming-events-holder').html(upcomingEventsHTML);
+        }
 
 
-
-  });
+    });
 
 
 </script>
