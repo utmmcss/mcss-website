@@ -92,28 +92,78 @@ function populateEventManagement() {
     var outHTML = '';
 
     var db = firebase.firestore();
-    db.collection('events').get().then(function (snapshot) {
 
-        var rawEvents = snapshot.docs.map(doc => {
-            return [doc.id, doc.data()];
-        });
+    db.collection('settings').doc('events').get().then(function (snapshot) {
 
-        console.log(rawEvents)
+        var featuredEventID = snapshot.data()['featured'];
 
-        for (var i in rawEvents) {
-            var e = rawEvents[i][1];
-
-            outHTML += '<li class="list-group-item">' +
-                '<b>Name:</b>' + e['name'] +'<br>' +
-                '<b>Date: </b>' + new Date(e['timestamp']).toString() + '<br>' +
-                '<b>ID: </b>' + rawEvents[i][0] + '<br>' +
-                '<button id="' + rawEvents[i][0] + '" class="btn btn-danger delete">Delete</button></li>'
+        if (!featuredEventID) {
+            $('#clearFeaturedEvent').hide();
         }
 
-        $('#event-management').html(outHTML);
+        db.collection('events').get().then(function (snapshot) {
 
+            var rawEvents = snapshot.docs.map(doc => {
+                return [doc.id, doc.data()];
+            });
+
+            console.log(rawEvents);
+
+            for (var i in rawEvents) {
+                var e = rawEvents[i][1];
+
+                outHTML += '<li class="list-group-item">' +
+                    (rawEvents[i][0] == featuredEventID ? '<b>FEATURED EVENT!</b><br>' : '') +
+                    '<b>Name:</b>' + e['name'] + '<br>' +
+                    '<b>Date: </b>' + new Date(e['timestamp']).toString() + '<br>' +
+                    '<b>ID: </b>' + rawEvents[i][0] + '<br>' +
+                    '<button id="' + rawEvents[i][0] + '" class="btn btn-danger delete">Delete</button>' +
+                    '<button id="' + rawEvents[i][0] + '" class="btn btn-warning feature" style="margin-left: 4px">Feature</button></li>'
+            }
+
+            $('#event-management').html(outHTML);
+
+        });
     });
 
+}
+
+function featureEvent(eID) {
+    var confirmation = prompt('Are you sure you want to feature the event with ID ' + eID + '? Type "YES" to confirm.')
+
+    if (confirmation == 'YES') {
+
+        var db = firebase.firestore();
+
+        db.collection('settings').doc('events').set({'featured': eID}).then(function () {
+            alert('Event featured!');
+            location.reload();
+        }).error(function () {
+            alert('Unable to delete event.');
+        });
+
+    } else {
+        alert('Action aborted.');
+    }
+}
+
+function clearFeaturedEvent() {
+    var confirmation = prompt('Are you sure you want to clear the featured event? Type "YES" to confirm.')
+
+    if (confirmation == 'YES') {
+
+        var db = firebase.firestore();
+
+        db.collection('settings').doc('events').set({'featured': ''}).then(function () {
+            alert('Featured event cleared!');
+            location.reload();
+        }).error(function () {
+            alert('Unable to delete event.');
+        });
+
+    } else {
+        alert('Action aborted.');
+    }
 }
 
 function deleteEvent(eID) {
@@ -142,14 +192,17 @@ $(document).ready(function () {
         deleteEvent($(this).attr("id"));
     });
 
+    $('body').on('click', '.feature', function () {
+        featureEvent($(this).attr("id"));
+    });
 });
 
 firebase.auth().onAuthStateChanged(function(user) {
 
     var db = firebase.firestore();
-    db.collection('users').doc('admin').get().then(function (snapshot) {
+    db.collection('settings').doc('admin').get().then(function (snapshot) {
 
-        var validUID = snapshot.data()['uids'];
+        var validUID = snapshot.data()['uid'];
         if (user && validUID.indexOf(user.uid) != -1) {
             sessionStorage.token = user.ra;
 
@@ -182,4 +235,5 @@ $(document).ready(function () {
     $('#login').click(login);
     $('#signout').click(signout);
     $('#addevent').click(addEvent);
+    $('#clearFeaturedEvent').click(clearFeaturedEvent);
 });

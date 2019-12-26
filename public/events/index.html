@@ -155,7 +155,7 @@
             featuredEvent['name'].toUpperCase() +
             '            </h1>\n' +
             '            <h3>\n' +
-            featuredEvent['date'].toUpperCase() + (featuredEvent['location'] ? (' @ ' + featuredEvent['location']) : '') +
+            featuredEvent['dateNoSpace'].toUpperCase() + (featuredEvent['location'] ? (' @ ' + featuredEvent['location']) : '') +
             '            </h3>\n' +
             '\n' +
             '\n' +
@@ -268,43 +268,46 @@
 
     // Get events from DB
     var db = firebase.firestore();
-    db.collection('events').get().then(function (snapshot) {
-        var rawEvents = snapshot.docs.map(doc => {
-            return doc.data();
-        });
 
-        var upcomingEvents = [];
-        var pastEvents = [];
 
-        for (var i in rawEvents) {
-            var e = rawEvents[i];
-            var eDate = new Date(e['timestamp']);
+    db.collection('settings').doc('events').get().then(function (snapshot) {
 
-            e['date'] = numToMonth[eDate.getMonth()] + '<br>' + eDate.getDate();
+        var featuredEventID = snapshot.data()['featured'];
 
-            // Past event
-            if (e['timestamp'] + 3600000 < new Date().getTime()) { // 1 hour grace for people finding the event during it
-                pastEvents.push(e);
-            } else { // Upcoming event
-                upcomingEvents.push(e);
+        db.collection('events').get().then(function (snapshot) {
+            var rawEvents = snapshot.docs.map(doc => {
+                return [doc.id, doc.data()];
+            });
+
+            var upcomingEvents = [];
+            var pastEvents = [];
+
+            for (var i in rawEvents) {
+                var e = rawEvents[i][1];
+                var eDate = new Date(e['timestamp']);
+
+                e['date'] = numToMonth[eDate.getMonth()] + '<br>' + eDate.getDate();
+                e['dateNoSpace'] = numToMonth[eDate.getMonth()] + ' ' + eDate.getDate();
+
+                // Past event
+                if (e['timestamp'] + 3600000 < new Date().getTime()) { // 1 hour grace for people finding the event during it
+                    pastEvents.push(e);
+                } else { // Upcoming event
+                    upcomingEvents.push(e);
+                }
+
+                if (featuredEventID == rawEvents[i][0]) {
+                    setFeaturedEvent(e);
+                }
             }
-        }
 
-        upcomingEvents.sort(eventSorter);
-        pastEvents.some(eventSorter);
+            upcomingEvents.sort(eventSorter);
+            pastEvents.some(eventSorter);
 
-        setUpcomingEvents(upcomingEvents);
-        setPastEvents(pastEvents);
+            setUpcomingEvents(upcomingEvents);
+            setPastEvents(pastEvents);
 
-        setFeaturedEvent({
-            'name': 'Firebase Techtalk',
-            'date': 'JUN 22',
-            'location' : 'University of Waterloo',
-            'image': '/img/daniel-korpai-HyTwtsk8XqA-unsplash.jpg',
-            'link': 'https://uwaterloo.ca'
         });
-
-
     });
 
 

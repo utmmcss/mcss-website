@@ -57,12 +57,12 @@ h1, h2, h3, h4, h5 {
     margin-top: 30vh !important;
 }
 .medium-cover-offset {
-    margin-top: 50vh !important;
+    margin-top: 60vh !important;
 }.minor-cover {
     height: 30vh !important;
 }
 .medium-cover {
-    height: 50vh !important;
+    height: 60vh !important;
 }
 .cover-content {
     color: white;
