@@ -57,6 +57,9 @@ h1, h2, h3, h4, h5 {
 
     text-align: center;
 }
+.fade-bg {
+    transition: background 0.5s;
+}
 .img-divider {
     height: 300px;
     background-position: center !important;

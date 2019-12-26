@@ -21,24 +21,16 @@
 
 <!-- Start custom content -->
 
-<section id="cover" style="background: url('https://upload.wikimedia.org/wikipedia/commons/b/ba/ArcheryGermanyEarly1980s-2.jpg')" class="cover medium-cover">
+<section id="cover" style="background: url('/img/andras-vas-Bd7gNnWJBkU-unsplash.jpg');" class="cover medium-cover fade-bg">
 
     <div class="tint">
 
         <div class="spacer"></div>
 
-        <div class="cover-content">
+        <div id="featured-event-content" class="cover-content">
 
-            <h3>
-                FEATURED EVENT
-            </h3>
+            <h1>EVENTS</h1>
 
-            <h1>
-                ARROW ARCHERY
-            </h1>
-
-
-            <button type="button" class="btn btn-warning event-button">BUY TICKET</button>
         </div>
 
 
@@ -122,17 +114,10 @@
     *     description
     *     time/date
     *     link
+    *     image
     *   }
     *
     * */
-
-    function eventSorter(a, b) {
-        if (a['timestamp'] == b['timestamp']) {
-            return 0;
-        } else {
-            return a['timestamp'] < b['timestamp'] ? -1 : 1
-        }
-    }
 
     const numToMonth = [
         'JAN',
@@ -149,38 +134,34 @@
         'DEC'
     ];
 
-    var db = firebase.firestore();
-    db.collection('events').get().then(function (snapshot) {
+    function setFeaturedEvent(featuredEvent) {
 
-        var rawEvents = snapshot.docs.map(doc => {
-            return doc.data();
-        });
-
-        console.log(rawEvents);
-
-        var upcomingEvents = [];
-        var pastEvents = [];
-
-        for (var i in rawEvents) {
-            var e = rawEvents[i];
-            var eDate = new Date(e['timestamp']);
-
-            e['date'] = numToMonth[eDate.getMonth()] + '<br>' + eDate.getDate();
-
-            // Past event
-            if (e['timestamp'] + 3600000 < new Date().getTime()) { // 1 hour grace for people finding the event during it
-
-                pastEvents.push(e);
-
-            } else { // Upcoming event
-                upcomingEvents.push(e);
-            }
+        if (featuredEvent['image']) {
+            $('#cover').css('background', 'url("' + featuredEvent['image'] + '")');
         }
 
-        upcomingEvents.sort(eventSorter);
-        pastEvents.some(eventSorter);
+        $('#featured-event-content').html(
+            '            <h3>\n' +
+            '                FEATURED EVENT\n' +
+            '            </h3>\n' +
+            '\n' +
+            '            <h1>\n' +
+            featuredEvent['name'].toUpperCase() +
+            '            </h1>\n' +
+            '            <h3>\n' +
+            featuredEvent['date'].toUpperCase() + (featuredEvent['location'] ? (' @ ' + featuredEvent['location']) : '') +
+            '            </h3>\n' +
+            '\n' +
+            '\n' +
 
-        var upcomingEventsHTML = '';
+            (featuredEvent['link'] ? (
+            '   <br>' +
+                '<a href="' + featuredEvent['link'] + '" target="_blank">' +
+            '       <button type="button" class="btn btn-warning event-button">BUY TICKET</button>' +
+            '   </a>') : '' ))
+    }
+
+    function setPastEvents(pastEvents) {
         var pastEventsHTML = '';
 
         for (var p in pastEvents) {
@@ -201,12 +182,22 @@
                 "    </div>\n"
         }
 
+        if (pastEvents.length == 0) {
+            $('#past-events').hide()
+        } else {
+            $('#past-events-holder').html(pastEventsHTML);
+        }
+    }
+
+    function setUpcomingEvents(upcomingEvents) {
+        var upcomingEventsHTML = '';
+
         for (var u in upcomingEvents) {
 
             var event = upcomingEvents[u];
             var colWidth = 6;
 
-            if (upcomingEvents.length % 2 !== 0 && u === upcomingEvents.length - 1) {
+            if (upcomingEvents.length % 2 != 0 && u == upcomingEvents.length - 1) {
                 colWidth = 12;
             }
 
@@ -223,8 +214,8 @@
                 (event['description'] ? event['description'] : '') +
                 "                </p>\n" +
                 (event['link'] ? ("            <a href='" + event['link'] +"' target='_blank'>" +
-                "<button type=\"button\" class=\"btn btn-warning event-button\">BUY TICKET</button>" +
-                "</a>") : "") +
+                    "<button type=\"button\" class=\"btn btn-warning event-button\">BUY TICKET</button>" +
+                    "</a>") : "") +
                 "            </div>\n" +
                 "\n" +
                 "        </div>\n" +
@@ -250,12 +241,6 @@
                 "    </div>"
         }
 
-        if (pastEvents.length == 0) {
-            $('#past-events').hide()
-        } else {
-            $('#past-events-holder').html(pastEventsHTML);
-        }
-
         if (upcomingEvents.length == 0) {
             $('#upcoming-events-holder').html("    <div class=\"col-md-12\">\n" +
                 "        <div class=\"event-object\">\n" +
@@ -265,6 +250,53 @@
         } else {
             $('#upcoming-events-holder').html(upcomingEventsHTML);
         }
+    }
+
+    function eventSorter(a, b) {
+        if (a['timestamp'] == b['timestamp']) {
+            return 0;
+        } else {
+            return a['timestamp'] < b['timestamp'] ? -1 : 1
+        }
+    }
+
+    // Get events from DB
+    var db = firebase.firestore();
+    db.collection('events').get().then(function (snapshot) {
+        var rawEvents = snapshot.docs.map(doc => {
+            return doc.data();
+        });
+
+        var upcomingEvents = [];
+        var pastEvents = [];
+
+        for (var i in rawEvents) {
+            var e = rawEvents[i];
+            var eDate = new Date(e['timestamp']);
+
+            e['date'] = numToMonth[eDate.getMonth()] + '<br>' + eDate.getDate();
+
+            // Past event
+            if (e['timestamp'] + 3600000 < new Date().getTime()) { // 1 hour grace for people finding the event during it
+                pastEvents.push(e);
+            } else { // Upcoming event
+                upcomingEvents.push(e);
+            }
+        }
+
+        upcomingEvents.sort(eventSorter);
+        pastEvents.some(eventSorter);
+
+        setUpcomingEvents(upcomingEvents);
+        setPastEvents(pastEvents);
+
+        setFeaturedEvent({
+            'name': 'Firebase Techtalk',
+            'date': 'JUN 22',
+            'location' : 'University of Waterloo',
+            'image': '/img/daniel-korpai-HyTwtsk8XqA-unsplash.jpg',
+            'link': 'https://uwaterloo.ca'
+        });
 
 
     });
