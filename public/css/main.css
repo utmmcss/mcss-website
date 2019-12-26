@@ -124,6 +124,9 @@ h1, h2, h3, h4, h5 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.3s;
 }
+.event-button {
+    font-family: "Montserrat SemiBold" !important;
+}
 
 .event-object:hover {
     transform: scale(1.01);
@@ -204,5 +207,12 @@ h1, h2, h3, h4, h5 {
 
     .past-event-content {
         text-align: center !important;
+    }
+
+    .cover-content h1 {
+        font-size: 3em !important;
+    }
+    .cover-content h3 {
+        font-size: 1em !important;
     }
 }

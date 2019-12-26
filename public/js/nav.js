@@ -21,6 +21,7 @@ $(document).ready(function () {
 
     function openOverlay() {
         $(".overlay").css({left: "0"});
+
         $("html").css({"overflow-y": "hidden"});
     }
 

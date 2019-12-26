@@ -38,7 +38,7 @@
             </h1>
 
 
-            <button type="button" class="btn btn-warning">BUY TICKET</button>
+            <button type="button" class="btn btn-warning event-button">BUY TICKET</button>
         </div>
 
 
@@ -126,6 +126,14 @@
     *
     * */
 
+    function eventSorter(a, b) {
+        if (a['timestamp'] == b['timestamp']) {
+            return 0;
+        } else {
+            return a['timestamp'] < b['timestamp'] ? -1 : 1
+        }
+    }
+
     const numToMonth = [
         'JAN',
         'FEB',
@@ -168,6 +176,9 @@
                 upcomingEvents.push(e);
             }
         }
+
+        upcomingEvents.sort(eventSorter);
+        pastEvents.some(eventSorter);
 
         var upcomingEventsHTML = '';
         var pastEventsHTML = '';
@@ -212,7 +223,7 @@
                 (event['description'] ? event['description'] : '') +
                 "                </p>\n" +
                 (event['link'] ? ("            <a href='" + event['link'] +"' target='_blank'>" +
-                "<button type=\"button\" class=\"btn btn-warning\">BUY TICKET</button>" +
+                "<button type=\"button\" class=\"btn btn-warning event-button\">BUY TICKET</button>" +
                 "</a>") : "") +
                 "            </div>\n" +
                 "\n" +
