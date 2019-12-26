@@ -54,12 +54,12 @@ $(document).ready(function () {
     };
 
     var wp = new Waypoint({
-        element: document.getElementById('cover'),
+        element: document.getElementById('scroll-body'),
         handler: function(direction) {
             updateScroll(direction == 'down' ? 'body' : 'top');
         },
-        offset: '-20px'
-    })
+        offset: '150px'
+    });
 
     updateScroll('top');
 });
