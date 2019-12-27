@@ -1,10 +1,11 @@
 /* General */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
 * {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
 }
 h1, h2, h3, h4, h5 {
-    font-family: "Montserrat SemiBold" !important;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600 !important;
 }
 
 .spacer {
@@ -121,7 +122,7 @@ h1, h2, h3, h4, h5 {
 .overlay-list {
     z-index: 950;
     text-align: center;
-    font: 300 2em 'Montserrat SemiBold';
+    font: 600 2em Montserrat, sans-serif;
 
     width: 90em;
 
@@ -150,7 +151,8 @@ h1, h2, h3, h4, h5 {
     transition: 0.3s;
 }
 .event-button {
-    font-family: "Montserrat SemiBold" !important;
+    font-family: Montserrat !important;
+    font-weight: 600 !important;
 }
 
 .event-object:hover {

@@ -11,6 +11,8 @@ $(document).ready(function () {
     });
 
     function toggleOverlay() {
+        console.log('Overlay toggle');
+
         $("#navham").toggleClass("is-active");
         if($("#navham").hasClass("is-active")){
             openOverlay();
