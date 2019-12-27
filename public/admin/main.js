@@ -49,6 +49,13 @@ function signout(silent) {
     });
 }
 
+function uuidv4() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}
+
 function addEvent() {
 
     /*
@@ -70,17 +77,56 @@ function addEvent() {
 
         console.log(data);
 
-        var db = firebase.firestore();
+        var img = $('#imageUpload')[0].files[0];
+        var rawFileName = $('#imageUpload').val().split('/');
+        var uploadImageName = '';
 
-        db.collection('events').add(data).then(function () {
-            alert('Event has been added!');
-            location.reload();
-        }).error(function () {
-            alert('Unable to add event.');
-        });
+        if (img) {
+
+            uploadImageName = uuidv4();
+            console.log(img);
+
+            var reader = new FileReader();
+            reader.readAsDataURL(img);
+
+            reader.onload = function(e) {
+
+                console.log('Upload file!', e.target);
+
+                var storageRef = firebase.storage().ref();
+                var imgRef = storageRef.child(uploadImageName);
+
+                imgRef.putString(e.target.result.toString().substr(22), 'base64').then(function(snapshot) {
+                    console.log('Uploaded a blob or file!', snapshot);
+
+                    storageRef.child(uploadImageName).getDownloadURL().then(function(url) {
+
+                        data['image'] = url;
+                        console.log('IMG URL IS', url);
+
+                        addEventToDB(data);
+
+                    });
+                });
+            };
+
+        } else {
+            addEventToDB(data);
+        }
     } else {
         alert('Mandatory field not filled!');
     }
+}
+
+function addEventToDB(data) {
+    var db = firebase.firestore();
+
+    db.collection('events').add(data).then(function (snapshot) {
+
+        alert('Event has been added!');
+        location.reload();
+
+    });
 }
 
 function populateEventManagement() {
@@ -138,8 +184,6 @@ function featureEvent(eID) {
         db.collection('settings').doc('events').set({'featured': eID}).then(function () {
             alert('Event featured!');
             location.reload();
-        }).error(function () {
-            alert('Unable to delete event.');
         });
 
     } else {
@@ -157,8 +201,6 @@ function clearFeaturedEvent() {
         db.collection('settings').doc('events').set({'featured': ''}).then(function () {
             alert('Featured event cleared!');
             location.reload();
-        }).error(function () {
-            alert('Unable to delete event.');
         });
 
     } else {
@@ -176,8 +218,6 @@ function deleteEvent(eID) {
         db.collection('events').doc(eID).delete().then(function () {
            alert('Event deleted!');
            location.reload();
-        }).error(function () {
-            alert('Unable to delete event.');
         });
 
     } else {
@@ -195,6 +235,7 @@ $(document).ready(function () {
     $('body').on('click', '.feature', function () {
         featureEvent($(this).attr("id"));
     });
+
 });
 
 firebase.auth().onAuthStateChanged(function(user) {
