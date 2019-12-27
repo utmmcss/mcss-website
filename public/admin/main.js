@@ -240,36 +240,6 @@ $(document).ready(function () {
 
 firebase.auth().onAuthStateChanged(function(user) {
 
-    /*
-    var db = firebase.firestore();
-    db.collection('settings').doc('admin').get().then(function (snapshot) {
-
-        var validUID = snapshot.data()['uid'];
-        if (user && validUID.indexOf(user.uid) != -1) {
-            sessionStorage.token = user.ra;
-
-            $('#logged-in').css('display', 'inline-block');
-            $('#not-logged-in').css('display', 'none');
-
-
-            populateEventManagement();
-
-        } else { // Just kick the user if they're not an admin. If they bypass this it's just a UI thing.
-            sessionStorage.token = '';
-
-            $('#not-logged-in').css('display', 'inline-block');
-            $('#logged-in').css('display', 'none');
-            // logged out
-
-            signout(true);
-
-            if (user && validUID.indexOf(user.uid) == -1) {
-                alert('You don\'t have permission to access this page!')
-            }
-        }
-
-    });*/
-
     firebase.auth().currentUser.getIdTokenResult(true) // 1
         .then((idTokenResult) => {
             if (idTokenResult.claims.admin) {
