@@ -240,6 +240,7 @@ $(document).ready(function () {
 
 firebase.auth().onAuthStateChanged(function(user) {
 
+    /*
     var db = firebase.firestore();
     db.collection('settings').doc('admin').get().then(function (snapshot) {
 
@@ -267,7 +268,36 @@ firebase.auth().onAuthStateChanged(function(user) {
             }
         }
 
-    });
+    });*/
+
+    firebase.auth().currentUser.getIdTokenResult(true) // 1
+        .then((idTokenResult) => {
+            if (idTokenResult.claims.admin) {
+                sessionStorage.token = user.ra;
+
+                $('#logged-in').css('display', 'inline-block');
+                $('#not-logged-in').css('display', 'none');
+
+
+                populateEventManagement();
+            } else {
+                sessionStorage.token = '';
+
+                $('#not-logged-in').css('display', 'inline-block');
+                $('#logged-in').css('display', 'none');
+                // logged out
+
+                signout(true);
+
+                if (user && validUID.indexOf(user.uid) == -1) {
+                    alert('You don\'t have permission to access this page!')
+                }
+            }
+        })
+        .catch((error) => {
+            console.log(error);
+            alert('You don\'t have permission to access this page!')
+        });
 
 });
 

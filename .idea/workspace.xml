@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84e9fc11-a01e-4d15-8947-0a9073879c11" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/manage_admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firestore.rules" beforeDir="false" afterPath="$PROJECT_DIR$/firestore.rules" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/admin/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage.rules" beforeDir="false" afterPath="$PROJECT_DIR$/storage.rules" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,59 +22,63 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/post.html">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="40" column="66" lean-forward="true" selection-start-line="39" selection-end-line="40" selection-end-column="66" />
+            <state relative-caret-position="343">
+              <caret line="86" column="7" selection-start-line="86" selection-start-column="7" selection-end-line="86" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/components/footer.html">
+        <entry file="file://$PROJECT_DIR$/manage_admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="90" selection-start-column="90" selection-end-column="90" />
+            <state relative-caret-position="378">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="22" column="76" lean-forward="true" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
+            <state relative-caret-position="419">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firebase.json">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/firestore.rules">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="5" column="103" lean-forward="true" selection-start-line="5" selection-start-column="103" selection-end-line="5" selection-end-column="103" />
+              <caret line="5" column="46" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/main.css">
+        <entry file="file://$PROJECT_DIR$/storage.rules">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+            <state relative-caret-position="144">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/admin/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1239">
-              <caret line="148" column="31" selection-start-line="148" selection-start-column="31" selection-end-line="148" selection-end-column="31" />
+            <state relative-caret-position="519">
+              <caret line="126" column="103" selection-start-line="126" selection-start-column="103" selection-end-line="126" selection-end-column="103" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h4#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -78,29 +87,23 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#1400#1406#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/admin/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="109" column="19" lean-forward="true" selection-start-line="109" selection-start-column="19" selection-end-line="109" selection-end-column="19" />
+            <state relative-caret-position="471">
+              <caret line="298" column="66" selection-start-line="298" selection-start-column="66" selection-end-line="298" selection-end-column="66" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="n#style#0;n#button#1;n#li#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage.rules">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -148,6 +151,9 @@
       <find>featureEvent</find>
       <find>app</find>
       <find>error</find>
+      <find>upload</find>
+      <find>Global Javascrip</find>
+      <find>settings').doc('ad</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,13 +176,17 @@
         <option value="$PROJECT_DIR$/public/components/nav.html" />
         <option value="$PROJECT_DIR$/public/components/footer.html" />
         <option value="$PROJECT_DIR$/public/js/nav.js" />
-        <option value="$PROJECT_DIR$/public/post.html" />
         <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/firestore.rules" />
+        <option value="$PROJECT_DIR$/public/post.html" />
         <option value="$PROJECT_DIR$/public/events/index.html" />
-        <option value="$PROJECT_DIR$/public/admin/index.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/add_admin.py" />
+        <option value="$PROJECT_DIR$/storage.rules" />
         <option value="$PROJECT_DIR$/public/admin/main.js" />
+        <option value="$PROJECT_DIR$/manage_admin.py" />
+        <option value="$PROJECT_DIR$/firestore.rules" />
+        <option value="$PROJECT_DIR$/public/admin/index.html" />
       </list>
     </option>
   </component>
@@ -282,7 +292,7 @@
       <workItem from="1576529523747" duration="3929000" />
       <workItem from="1576909413805" duration="2857000" />
       <workItem from="1576951119920" duration="1358000" />
-      <workItem from="1577153628198" duration="42806000" />
+      <workItem from="1577153628198" duration="46082000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Outline">
       <created>1575317861417</created>
@@ -445,11 +455,32 @@
       <option name="project" value="LOCAL" />
       <updated>1577400860942</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Image upload for featured event">
+      <created>1577407054020</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1577407054020</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Image upload for featured event">
+      <created>1577407071399</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1577407071399</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Rearranged js loading order">
+      <created>1577407793444</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1577407793444</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72554000" />
+    <option name="totallyTimeSpent" value="75830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="411" width="1680" height="1050" extended-state="6" />
@@ -520,7 +551,9 @@
     <MESSAGE value="Featured event" />
     <MESSAGE value="Fixed cover" />
     <MESSAGE value="Set featured event on admin dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set featured event on admin dashboard" />
+    <MESSAGE value="Image upload for featured event" />
+    <MESSAGE value="Rearranged js loading order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rearranged js loading order" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.html" />
@@ -624,7 +657,7 @@
     <entry file="file://$PROJECT_DIR$/public/post.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="40" column="66" lean-forward="true" selection-start-line="39" selection-end-line="40" selection-end-column="66" />
+          <caret line="40" column="66" selection-start-line="39" selection-end-line="40" selection-end-column="66" />
           <folding>
             <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -636,20 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="90" selection-start-column="90" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="22" column="76" lean-forward="true" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firestore.rules">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="103" lean-forward="true" selection-start-line="5" selection-start-column="103" selection-end-line="5" selection-end-column="103" />
         </state>
       </provider>
     </entry>
@@ -670,13 +689,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage.rules">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="86" column="7" selection-start-line="86" selection-start-column="7" selection-end-line="86" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firebase.json">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage.rules">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/admin/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="298" column="66" selection-start-line="298" selection-start-column="66" selection-end-line="298" selection-end-column="66" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#li#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage_admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firestore.rules">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="46" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1239">
-          <caret line="148" column="31" selection-start-line="148" selection-start-column="31" selection-end-line="148" selection-end-column="31" />
+        <state relative-caret-position="519">
+          <caret line="126" column="103" selection-start-line="126" selection-start-column="103" selection-end-line="126" selection-end-column="103" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -685,19 +753,7 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#1400#1406#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="109" column="19" lean-forward="true" selection-start-line="109" selection-start-column="19" selection-end-line="109" selection-end-column="19" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#li#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
