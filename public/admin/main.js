@@ -78,14 +78,45 @@ function addEvent() {
         console.log(data);
 
         var img = $('#imageUpload')[0].files[0];
-        var rawFileName = $('#imageUpload').val().split('/');
         var uploadImageName = '';
+        var uploader = document.getElementById('uploader');
 
         if (img) {
 
             uploadImageName = uuidv4();
             console.log(img);
 
+            var storageRef = firebase.storage().ref();
+            var imgRef = storageRef.child(uploadImageName);
+
+            var task = imgRef.put(img);
+
+            task.on('state_changed',
+
+                function progress(snapshot) {
+                    var per = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    uploader.value = per;
+                },
+
+                function error(e) {
+                    console.log(e);
+                    alert('There was a crash!');
+                },
+
+                function complete() {
+                //alert('Image uploaded!');
+
+                storageRef.child(uploadImageName).getDownloadURL().then(function(url) {
+
+                    data['image'] = url;
+                    console.log('IMG URL IS', url);
+
+                    addEventToDB(data);
+
+                });
+            })
+
+            /*
             var reader = new FileReader();
             reader.readAsDataURL(img);
 
@@ -108,7 +139,7 @@ function addEvent() {
 
                     });
                 });
-            };
+            };*/
 
         } else {
             addEventToDB(data);
