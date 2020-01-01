@@ -15,19 +15,33 @@ while page:
     page = page.get_next_page()
 
 while True:
-    uid = input('Enter UID of user to manage [0 to quit]: ')
+    email = input('Enter email of user to manage [0 to quit]: ')
 
-    if uid == '0':
+
+    if email == '0':
         break
     else:
-        confirmation = input('Do you want this user to become an admin %s? [Y/N/Cancel]: ' % str(auth.get_user(uid)))
 
-        if confirmation == 'Y':
-            auth.set_custom_user_claims(uid, {'admin': True})
-            print('Done - Promoted')
-        elif confirmation == 'N':
+        try:
+            user = auth.get_user_by_email(email)
 
-            auth.set_custom_user_claims(uid, {'admin': False})
-            print('Done - Demoted')
-        else:
-            print('Aborted.')
+            if user.email_verified:
+
+                confirmation = input('Do you want this user to bee an admin (%s)? [Y/N/Cancel]: ' % str(email))
+
+                if confirmation == 'Y':
+                    auth.set_custom_user_claims(user.uid, {'admin': True})
+                    print('Done - Promoted')
+                elif confirmation == 'N':
+
+                    auth.set_custom_user_claims(user.uid, {'admin': False})
+                    print('Done - Demoted')
+                else:
+                    print('Aborted.')
+
+
+            else:
+                print('%s is not associated with an account!' % email)
+
+        except:
+            print('Unable to operate on that user. Do they have a valid account?')
