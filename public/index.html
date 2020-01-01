@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MCSS</title>
+    <meta charset="UTF-8">
+    <title>MCSS</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-  
-  <!-- Global stylesheet and component loader -->
-  <script src="/js/component-loader.js"></script>
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/hamburger.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+    <!-- Global stylesheet and component loader -->
+    <script src="/js/component-loader.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/hamburger.css">
 
 </head>
 <body>
@@ -20,68 +20,118 @@
 
 <!-- Start custom content -->
 
-<section id="cover" style="background: url('/img/mimi-thian-vdXMSiX-n6M-unsplash.jpg')" class="cover medium-cover fixed-cover">
+<section id="cover" style="background: url('/img/marvin-meyer-SYTO3xs06fU-unsplash.jpg')" class="cover medium-cover fixed-cover">
 
-  <div class="tint">
+    <div class="tint">
 
-    <div class="spacer"></div>
+        <div class="spacer"></div>
 
-    <div class="cover-content">
+        <div class="cover-content">
 
-      <h1>
-          MCSS
-      </h1>
+            <h1>
+                UTM MCSS
+            </h1>
+
+        </div>
+
+
     </div>
-
-
-  </div>
 
 </section>
 
 <div id="scroll-body" class="fixed-cover-body medium-cover-offset">
+<!--<link rel="stylesheet" href="styles.css">-->
+    <section id="about" class="content-section">
 
-  <section id="about" class="content-section">
+        <h3>About Us</h3>
+        <p> We are the Mathematical and Computational Sciences Society. We serve all students from <br>
+            the Department of Mathematical and Computational Sciences at the University of Toronto Mississauga.  </p>
 
-    <h2>About</h2>
+        <div style="line-height:150%;">
+            <br>
+        </div>
+
+        Newcomers can access our Welcome Package here: <br>
+        <a href="/blog?page=/blogs/general/welcome-package/">
+            <button type="button" class="btn btn-warning">Welcome Package</button>
+        </a>
+
+        <div style="line-height:150%;">
+            <br>
+        </div>
+
+    </section>
+
+    <!--
+    <section class="img-divider" style="background: url('img/jonathan.jpg')" >
+      <div class="tint"></div>
+    </section> -->
+    <div class="container">
+        <div class="row">
+            <div class="col" style="text-align:center">
+                <h3> Initiatives</h3>
+
+                <h5> For more details, visit our <a href="/events"> events </a> (TODO: fix) page. </h5>
+                <ul class="list-group">
+                    <li class="list-group-item" >Internship Track</li>
+                    <li class="list-group-item" >Grayhound Software</li>
+                    <li class="list-group-item" >Networking Series</li>
+                    <li class="list-group-item" >Mentorship Program</li>
+                </ul>
+            </div>
+            <div class="col" style="text-align:center">
+                <h3> Events</h3>
+                <h5> For more details, visit our <a href="/events"> events </a>page. </h5>
+                <ul class="list-group" style="">
+                    <li class="list-group-item d-flex justify-content-between align-items-center" >
+                        Firebase Workshop 1
+                        <div class=\"upcoming-event-right\">
+                            <div class=\"upcoming-event-trapezoid\">
+                                <div class=\"upcoming-event-trapezoid-content\">
+                                    <h2>Jan 3</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" >
+                        Website Workshop 3
+                        <div class=\"upcoming-event-right\">
+                            <div class=\"upcoming-event-trapezoid\">
+                                <div class=\"upcoming-event-trapezoid-content\">
+                                    <h2>Jan 8</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" >
+                        Firebase Workshop 2
+                        <div class=\"upcoming-event-right\">
+                            <div class=\"upcoming-event-trapezoid\">
+                                <div class=\"upcoming-event-trapezoid-content\">
+                                    <h2>Jan 12</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
 
 
+                </ul>
+        </div>
+    </div>
+    </div>
 
-    <a href="/blog?page=/blogs/general/welcome-package/">
-      <button type="button" class="btn btn-warning">Welcome Package</button>
-    </a>
+    <section id="stuff" class="content-section">
 
-    <p>Idk, we like to code and stuff.</p>
+    </section>
 
-  </section>
-
-  <!--
-  <section class="img-divider" style="background: url('img/jonathan.jpg')" >
-    <div class="tint"></div>
-  </section> -->
-
-  <section id="stuff" class="content-section">
-
-    <h2>Stuff1</h2>
-
-    <p>Idk, we like to code and stuff.</p>
-
-  </section>
-  <section id="stuff2" class="content-section">
-
-    <h2>Stuff2</h2>
-
-    <p>Idk, we like to code and stuff.</p>
-
-  </section>
-
-  <!--
-  <a href="index.html?page=/blogs/general/welcome-package/">Cool blog!</a>
-  -->
+    <!--
+    <a href="post.html?page=/blogs/general/welcome-package/">Cool blog!</a>
+    -->
 
 
-  <!-- End custom content -->
+    <!-- End custom content -->
 
-  <div id="footer-holder"></div>
+    <div id="footer-holder"></div>
 </div>
 
 </body>
