@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84e9fc11-a01e-4d15-8947-0a9073879c11" name="Default Changelist" comment="Posts are in a directory">
-      <change afterPath="$PROJECT_DIR$/public/template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage_admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage_admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/components/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/marvin-meyer-SYTO3xs06fU-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/marvin-meyer-SYTO3xs06fU-unsplash.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/initiatives/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/initiatives/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/main/main.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -352,5 +344,11 @@
     <MESSAGE value="Admin management with email" />
     <MESSAGE value="Posts are in a directory" />
     <option name="LAST_COMMIT_MESSAGE" value="Posts are in a directory" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="600" height="424" key="javadoc.popup" timestamp="1577913182467">
+      <screen x="0" y="22" width="1680" height="953" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/0.22.1680.953@0.22.1680.953" timestamp="1577913182467" />
   </component>
 </project>
