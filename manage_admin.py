@@ -10,7 +10,7 @@ page = auth.list_users()
 while page:
     for user in page.users:
 
-        print('UID: %s, ADMIN: %s, EMAIL: %s' % (user.uid, 'True' if user.custom_claims.get('admin') else 'False', user.email))
+        print('UID: %s, ADMIN: %s, EMAIL: %s' % (user.uid, 'True' if user and user.custom_claims and user.custom_claims.get('admin') else 'False', user.email))
 
     page = page.get_next_page()
 
