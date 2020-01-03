@@ -65,3 +65,5 @@ node_modules/
 .env
 
 firebase_key.json
+
+./idea/workspace.xml
