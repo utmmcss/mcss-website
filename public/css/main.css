@@ -232,17 +232,34 @@ h1, h2, h3, h4, h5 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    text-transform: uppercase;
     background-color: #2B4162;
     margin: 0 10px 0 10px;
     border-radius: 20px;
 }
+.row {
+    margin-top: 30px;
+}
 
+.event-box div{
+    width:70%;
+}
+.event-title{
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
 .event-description{
-    font-size:1rem;
+    font-size:.8rem;
 }
 .event-cta{
-    width: 50%;
+    width: 40%;
+    background: none;
+    margin-bottom: 20px;
+    display: flex;
+}
+.initiatives-title{
+    text-transform: uppercase;
 }
 /* Footer */
 #footer {
