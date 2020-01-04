@@ -223,7 +223,31 @@ h1, h2, h3, h4, h5 {
     border: solid 1px grey;
 }
 
+/* Initiatives */
+.event-box{
+    height: 250px;
+    justify-content: space-around;
+    display:flex;
+    color:white;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #2B4162;
+    margin: 0 10px 0 10px;
+    border-radius: 20px;
+}
 
+.event-title{
+    
+}
+
+.event-description{
+    font-size:1rem;
+}
+.event-cta{
+    width: 50%;
+}
 /* Footer */
 #footer {
     min-height: 350px;
@@ -307,3 +331,4 @@ h1, h2, h3, h4, h5 {
         font-size: 1em !important;
     }
 }
+
