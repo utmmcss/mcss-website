@@ -241,9 +241,17 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Initiatives */
-
 .front-page-initiatives {
     list-style-type:none;
+
+
+    height: 100%;
+    flex-direction: column !important;
+    display: flex !important;
+    justify-content: space-around !important;
+}
+.front-page-initiatives-column {
+    height: calc(100% - 80px);
 }
 
 .initiative-box{
@@ -451,14 +459,22 @@ input{
         height: 360px;
     }
 
+    .front-page-initiatives-column {
+        height: calc(100% - 102px);
+    }
 }
 
 
 /* Main page double column breakpoint */
-@media screen and (max-width:769px){
+@media screen and (max-width:767px){
     #right-events-column {
         margin-top: 20px;
     }
+
+    .front-page-initiatives-right {
+        margin-top: 20px;
+    }
+
 }
 
 /* Smaller Screens */
