@@ -8,6 +8,18 @@ h1, h2, h3, h4, h5 {
     font-family: Montserrat, sans-serif;
     font-weight: 600 !important;
 }
+.content-section a {
+    color: #333333 !important;
+    font-weight: bold !important;
+    text-decoration: underline !important;
+    text-decoration-color: #333333 !important;
+}
+.content-section a:hover {
+    color: gray !important;
+}
+.content-section a:active {
+    color: grey !important;
+}
 
 .spacer {
     height: 50%;
@@ -95,21 +107,18 @@ h1, h2, h3, h4, h5 {
 
     margin-top: 50px;
     margin-bottom: 50px;
-
 }
 
 /* Navbar overlay */
 .overlay a {
-    color:white;
-    text-decoration: none;
+    color:white !important;
+    text-decoration: none !important;
 }
 .overlay a:hover {
-    color:lightgray;
-    text-decoration: none;
+    color:lightgray !important;
 }
 .overlay a:active {
-    color:lightslategray;
-    text-decoration: none;
+    color:lightslategray !important;
 }
 .overlay {
     z-index: 900;
@@ -196,7 +205,6 @@ h1, h2, h3, h4, h5 {
 }
 
 .event-column {
-    max-width: 900px;
     left: 0 !important;
     right: 0 !important;
     margin-left: auto !important;
@@ -205,6 +213,7 @@ h1, h2, h3, h4, h5 {
 .past-event-object {
     margin-left: 15px !important;
     margin-right: 15px !important;
+    list-style-type:none;
 }
 .past-event-date {
     width: 100%;
@@ -232,6 +241,11 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Initiatives */
+
+.front-page-initiatives {
+    list-style-type:none;
+}
+
 .initiative-box{
     height: 250px;
     justify-content: space-around;
@@ -362,6 +376,16 @@ h1, h2, h3, h4, h5 {
     color: white;
     font-weight: bold;
 }
+.footer-quick-links a:hover {
+    color: darkgray;
+    text-decoration: none;
+    font-weight: bold;
+}
+.footer-quick-links a:active {
+    color: gray;
+    text-decoration: none;
+    font-weight: bold;
+}
 .footer-quick-links li {
     padding-top: 2px;
     padding-bottom: 2px;
@@ -435,14 +459,10 @@ input{
     #right-events-column {
         margin-top: 20px;
     }
-
 }
 
 /* Smaller Screens */
 @media screen and (max-width:720px){
-
-
-
     .content-section {
         padding-left: 10px;
         padding-right: 10px;
