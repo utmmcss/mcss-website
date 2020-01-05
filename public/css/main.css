@@ -78,8 +78,8 @@ h1, h2, h3, h4, h5 {
     padding-left: 50px;
     padding-right: 50px;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     text-align: center;
 
@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5 {
 
 /* Events */
 .event-object {
-    background: white;
+    background: #ffffff;
     min-height: 60px;
     padding: 20px;
     margin-bottom: 20px;
@@ -171,6 +171,9 @@ h1, h2, h3, h4, h5 {
     list-style-type:none;
 }
 .upcoming-event-left {
+    padding-left: 2px;
+    padding-right: 2px;
+
     width: calc(100% - 150px);
     height: 100%;
     display: inline-block;
@@ -230,8 +233,6 @@ h1, h2, h3, h4, h5 {
 
 /* Initiatives */
 .initiative-box{
-    max-width: 300px;
-    min-width: 300px;
     height: 250px;
     justify-content: space-around;
     display:flex;
@@ -421,8 +422,19 @@ input{
 
 }
 
+
+/* Main page double column breakpoint */
+@media screen and (max-width:769px){
+    #right-events-column {
+        margin-top: 20px;
+    }
+
+}
+
 /* Smaller Screens */
 @media screen and (max-width:720px){
+
+
 
     .content-section {
         padding-left: 10px;
