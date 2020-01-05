@@ -346,6 +346,13 @@ h1, h2, h3, h4, h5 {
     margin-top: 20px;
     text-align: center;
 }
+.footer-social-media {
+    padding: 0;
+    list-style-type: none;
+}
+.footer-social-media .navsocial {
+    font-size: 20px;
+}
 .footer-quick-links {
     padding: 0;
     list-style-type: none;
