@@ -108,23 +108,6 @@
 
 <script>
 
-    /*
-    * Database schema
-    *
-    * /-/admin/
-    * | |- UID of people with write access
-    * |-/events/
-    *   |-x : {
-    *     name
-    *     location
-    *     description
-    *     time/date
-    *     link
-    *     image
-    *   }
-    *
-    * */
-
     const numToMonth = [
         'JAN',
         'FEB',
@@ -302,7 +285,7 @@
             }
 
             upcomingEvents.sort(eventSorter);
-            pastEvents.some(eventSorter);
+            pastEvents.sort(eventSorter);
 
             setUpcomingEvents(upcomingEvents);
             setPastEvents(pastEvents);

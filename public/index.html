@@ -78,29 +78,15 @@
             <div class="col-md-6" style="text-align:center">
                 <h3> Events</h3>
                 <h5> For more details, visit our <a href="/events"> events </a>page. </h5>
-                <ul class="list-group" style="">
-                    <li class="list-group-item d-flex justify-content-between align-items-center" >
-                        Firebase Workshop 1
-                        <div class=\"upcoming-event-right\">
-                            <div class=\"upcoming-event-trapezoid\">
-                                <div class=\"upcoming-event-trapezoid-content\">
-                                    <h2>Jan 3</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center" >
-                        Website Workshop 3
-                        <div class=\"upcoming-event-right\">
-                            <div class=\"upcoming-event-trapezoid\">
-                                <div class=\"upcoming-event-trapezoid-content\">
-                                    <h2>Jan 8</h2>
-                                </div>
-                            </div>
-                        </div>
+
+                <ul id="upcoming-events-holder" class="list-group" style="">
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <h2>Loading events...</h2>
                     </li>
 
                 </ul>
+
             </div>
         </div>
     </section>
@@ -170,5 +156,108 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="/js/nav.js"></script>
 <script src="/js/main.js"></script>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.4.0/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.4.0/firebase-firestore.js"></script>
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+<script>
+
+    const numToMonth = [
+        'JAN',
+        'FEB',
+        'MAR',
+        'APR',
+        'MAY',
+        'JUN',
+        'JUL',
+        'AUG',
+        'SEP',
+        'OCT',
+        'NOV',
+        'DEC'
+    ];
+
+    function setUpcomingEvents(upcomingEvents) {
+        var upcomingEventsHTML = '';
+
+        for (var u = 0; u < Math.min(3, upcomingEvents.length); u++) {
+
+            var event = upcomingEvents[u];
+
+            upcomingEventsHTML += '               <li class="list-group-item d-flex justify-content-between align-items-center" ><h3>\n' +
+                event['name'] + '</h3>' +
+                (event['link'] ? ("            <a href='" + event['link'] +"' target='_blank'>" +
+                    "<button type=\"button\" class=\"btn btn-warning event-button\">BUY TICKET</button>" +
+                    "</a>") : "") +
+                '                        <div class=\\"upcoming-event-right\\">\n' +
+                '                            <div class=\\"upcoming-event-trapezoid\\">\n' +
+                '                                <div class=\\"upcoming-event-trapezoid-content\\">\n' +
+                '                                    <h2>' + event['date']  +'</h2>\n' +
+                '                                </div>\n' +
+                '                            </div>\n' +
+                '                        </div>\n' +
+                '                    </li>'
+
+        }
+
+        if (upcomingEvents.length == 0) {
+            $('#upcoming-events-holder').html("    <div class=\"col-md-12\">\n" +
+                "        <div class=\"event-object\">\n" +
+                "            <h2>No events found :(</h2>\n" +
+                "        </div>\n" +
+                "    </div>\n")
+        } else {
+            $('#upcoming-events-holder').html(upcomingEventsHTML);
+        }
+    }
+
+    function eventSorter(a, b) {
+        if (a['timestamp'] == b['timestamp']) {
+            return 0;
+        } else {
+            return a['timestamp'] < b['timestamp'] ? -1 : 1
+        }
+    }
+
+    // Get events from DB
+    var db = firebase.firestore();
+
+
+    db.collection('settings').doc('events').get().then(function (snapshot) {
+
+        db.collection('events').get().then(function (snapshot) {
+            var rawEvents = snapshot.docs.map(doc => {
+                return [doc.id, doc.data()];
+            });
+
+            var upcomingEvents = [];
+
+            for (var i in rawEvents) {
+                var e = rawEvents[i][1];
+                var eDate = new Date(e['timestamp']);
+
+                e['date'] = numToMonth[eDate.getMonth()] + '<br>' + eDate.getDate();
+                e['dateNoSpace'] = numToMonth[eDate.getMonth()] + ' ' + eDate.getDate();
+
+                if (e['timestamp'] + 3600000 >= new Date().getTime()) { // 1 hour grace for people finding the event during it
+                    upcomingEvents.push(e);
+                }
+            }
+
+            upcomingEvents.sort(eventSorter);
+
+            setUpcomingEvents(upcomingEvents);
+
+        });
+    });
+
+
+</script>
 
 </html>
