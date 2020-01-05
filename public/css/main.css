@@ -274,13 +274,7 @@ h1, h2, h3, h4, h5 {
     color: #333;
     overflow: hidden;
 }
-/*.team-section h1{*/
-/*    font-size: 20px;*/
-/*    text-transform: uppercase;*/
-/*    display: inline-block;*/
-/*    border-bottom: 4px solid;*/
-/*    padding-bottom: 10px;*/
-/*}*/
+
 .person{
     float: left;
     width: calc(100% / 3);
@@ -292,8 +286,8 @@ h1, h2, h3, h4, h5 {
     background: #ddd;
 }
 .person img{
-    width: 350px;
-    height: 520px;
+    width: 250px;
+    height: 370px;
 }
 .person-name{
     margin: 16px 0;
@@ -410,6 +404,20 @@ input{
     #footer {
         text-align: center;
     }
+
+    .person{
+        float: left;
+        width: calc(100%/2);
+        overflow: hidden;
+        padding: 40px 0;
+        transition: 0.4s;
+    }
+
+    .person img{
+        width: 240px;
+        height: 360px;
+    }
+
 }
 
 /* Smaller Screens */
@@ -435,6 +443,18 @@ input{
         font-size: 1em !important;
     }
 
+    .person{
+        float: left;
+        width: 100%;
+        overflow: hidden;
+        padding: 20px 0;
+        transition: 0.4s;
+    }
+
+    .person img{
+        width: 240px;
+        height: 360px;
+    }
 }
 
 
