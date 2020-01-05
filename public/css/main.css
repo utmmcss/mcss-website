@@ -43,6 +43,12 @@ h1, h2, h3, h4, h5 {
 .nav-top {
     background: none !important;
 }
+.nav-link i {
+    font-size: 160% !important;
+}
+.nav-link {
+    padding-right:25px !important;
+}
 
 /* Content */
 .cover {
@@ -209,6 +215,7 @@ h1, h2, h3, h4, h5 {
     right: 0 !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    padding: 0 !important;
 }
 .past-event-object {
     margin-left: 15px !important;
