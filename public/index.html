@@ -190,6 +190,7 @@
 
             var event = upcomingEvents[u];
 
+            /*
             upcomingEventsHTML += '               <li class="list-group-item d-flex justify-content-between align-items-center" ><h3>\n' +
                 event['name'] + '</h3>' +
                 (event['link'] ? ("            <a href='" + event['link'] +"' target='_blank'>" +
@@ -202,7 +203,45 @@
                 '                                </div>\n' +
                 '                            </div>\n' +
                 '                        </div>\n' +
-                '                    </li>'
+                '                    </li>'*/
+
+            upcomingEventsHTML +=
+                "      <li class=\"event-object upcoming-event-object\">\n" +
+                "        <!-- Left side-->\n" +
+                "        <div class=\"upcoming-event-left\">\n" +
+                "            <div class=\"spacer\"></div>\n" +
+                "            <div class=\"unspace\">\n" +
+                "                <h2>\n" +
+                event['name'] +
+                "                </h2>\n" +
+                "                <p>\n" +
+                (event['description'] ? event['description'] : '') +
+                "                </p>\n" +
+                (event['link'] ? ("            <a href='" + event['link'] +"' target='_blank'>" +
+                    "<button type=\"button\" class=\"btn btn-warning event-button\">BUY TICKET</button>" +
+                    "</a>") : "") +
+                "            </div>\n" +
+                "\n" +
+                "        </div>\n" +
+                "\n" +
+                "        <!-- Right side-->\n" +
+                "        <div class=\"upcoming-event-right\">\n" +
+                "            <div class=\"upcoming-event-trapezoid\">\n" +
+                "                <div class=\"upcoming-event-trapezoid-content\">\n" +
+                "                    <div class=\"spacer\"></div>\n" +
+                "                    <div class=\"unspace\">\n" +
+                "                        <h2>\n" +
+                event['date'] +
+                "                        </h2>\n" +
+                "                        <p>\n" +
+                (event['location'] ? ('@ ' + event['location']) : '') +
+                "                        </p>\n" +
+                "                    </div>\n" +
+                "\n" +
+                "                </div>\n" +
+                "            </div>\n" +
+                "        </div>\n" +
+                "      </li>\n"
 
         }
 
