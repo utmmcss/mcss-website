@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
 * {
     font-family: Montserrat, sans-serif;
+    --footerBgColor: #2E2E2E;
 }
 h1, h2, h3, h4, h5 {
     font-family: Montserrat, sans-serif;
@@ -224,7 +225,7 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Initiatives */
-.event-box{
+.initiative-box{
     height: 250px;
     justify-content: space-around;
     display:flex;
@@ -240,10 +241,10 @@ h1, h2, h3, h4, h5 {
     margin-top: 30px;
 }
 
-.event-box div{
+.initiative-box div{
     width:70%;
 }
-.event-title{
+.initiative-title{
     text-transform: uppercase;
     font-size: 2rem;
     line-height: 2rem;
@@ -258,21 +259,20 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 20px;
     display: flex;
 }
-.initiatives-title{
+.initiatives-page-title{
     text-transform: uppercase;
 }
 /* Footer */
 #footer {
     min-height: 350px;
     height: 30vh;
-    background: rgb(240, 240, 240);
-    color: rgb(70, 70, 70);
-
+    background: var(--footerBgColor);
+    color: white;
     bottom: 0 !important;
     margin-top: 50px
 }
 #footer i {
-    color: rgb(70, 70, 70);
+    color: white;
 }
 #footer-spacer {
     height: 50% !important;
@@ -282,10 +282,14 @@ h1, h2, h3, h4, h5 {
 }
 
 #footer-address {
-    font-size: 1.1em;
+    font-size: 1em;
+    color: white;
 }
 #copyright {
     font-size: 0.9em;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
 }
 .footer-quick-links {
     padding: 0;
@@ -293,7 +297,7 @@ h1, h2, h3, h4, h5 {
     font-size: 1.1em;
 }
 .footer-quick-links a {
-    color: rgb(70, 70, 70);
+    color: white;
     font-weight: bold;
 }
 .footer-quick-links li {
@@ -306,6 +310,34 @@ h1, h2, h3, h4, h5 {
     margin: 10px;
     padding: 0;
     display: inline;
+}
+
+input{
+    height: 40px;
+    border-radius: 5px;
+}
+
+#form-title{
+    margin-bottom: 30px;
+}
+#email-input{
+    width: 50%;
+    font-size: 0.7em;
+    padding-left: 20px;
+    border: 1px solid white;
+    color: white;
+    background: var(--footerBgColor);
+}
+
+#email-submit{
+    width: 40%;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-left: 5%;
+    background: #ED6800;
+    color:white;
+    border: none;
 }
 
 
