@@ -226,6 +226,8 @@ h1, h2, h3, h4, h5 {
 
 /* Initiatives */
 .initiative-box{
+    max-width: 300px;
+    min-width: 300px;
     height: 250px;
     justify-content: space-around;
     display:flex;
@@ -234,11 +236,9 @@ h1, h2, h3, h4, h5 {
     align-items: center;
     text-align: center;
     background-color: #2B4162;
-    margin: 0 10px 0 10px;
+    margin-bottom: 30px;
     border-radius: 20px;
-}
-.row {
-    margin-top: 30px;
+    box-shadow: -5px -5px 20px 0px rgba(0,0,0,0.75);
 }
 
 .initiative-box div{
@@ -246,8 +246,8 @@ h1, h2, h3, h4, h5 {
 }
 .initiative-title{
     text-transform: uppercase;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 1.7rem;
+    line-height: 1.7rem;
     font-weight: 400;
 }
 .event-description{
@@ -275,7 +275,7 @@ h1, h2, h3, h4, h5 {
     color: white;
 }
 #footer-spacer {
-    height: 50% !important;
+    height: 50%;
 }
 #footer-content {
     transform: translateY(-50%);
@@ -375,5 +375,6 @@ input{
     .cover-content h3 {
         font-size: 1em !important;
     }
+
 }
 
