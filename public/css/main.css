@@ -421,7 +421,7 @@ input{
 #form-title{
     margin-bottom: 30px;
 }
-#email-input{
+#mce-EMAIL{
     width: 50%;
     font-size: 0.7em;
     padding-left: 20px;
@@ -430,7 +430,7 @@ input{
     background: var(--footerBgColor);
 }
 
-#email-submit{
+#mc-embedded-subscribe{
     width: 40%;
     text-transform: uppercase;
     font-size: 0.7em;
