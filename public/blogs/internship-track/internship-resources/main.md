@@ -1,7 +1,11 @@
 #Internship Resources
+####Author: Arsala Bangash
 
-<!--
-* [Creating a Technical resume](#Creating a Technical resume)
+***
+
+
+##Overview
+* Creating a Technical resume
 * Where to apply
     * Intern Supply
     * Angellist Jobs
@@ -16,10 +20,14 @@
 * Where to learn
     * 📚 Cracking the Coding Interview
     * Hackerrank Cracking the Coding Interview
-    * Picking a programming language-->
+    * Picking a programming language
+
+<br>
 
 ##Creating a Technical resume
-###Example of a bad resume for CS internships
+
+
+####Example of a bad resume for CS internships
 
 ![Bad Resume](BLOGROOT/img/badresume.png)
 
@@ -30,8 +38,7 @@
 * Mentioning that you won an app contest is good but more details about the app and how it was built is a must. 
 
 
-####Example of a good resume for CS Internships with no industry 
-experience. 
+####Example of a good resume for CS Internships with no industry experience. 
 
 ![Good Resume](BLOGROOT/img/goodresume.png)
 
@@ -56,6 +63,8 @@ More: [Awesome video from Google about creating a resume] (https://www.youtube.c
 
 Resume office hours doc: [HERE](https://docs.google.com/document/d/1V4vWPBBXpxbyges8qN0dmZdSSiXmPzsDomUPgfImfTQ/edit?usp=sharing)
 
+<br>
+
 ##Where to apply
 ###Intern Supply
 
@@ -77,9 +86,13 @@ Website Link: <https://www.techinternship.io>
 
 **NOTE: If you are a freshman or sophomore you should consider applying to internship programs that are exclusively for you. Here is a list of some of [these programs](https://www.wellesley.edu/careereducation/resources/technology-internships-first-years-and-sophomores).**
 
+<br>
+
 ##Other Resources:
 * <https://github.com/elaine-zheng/summer2020internships>
 * <https://github.com/ChrisDryden/Canadian-Tech-Internships-Summer-2020>
+
+<br>
 
 ##Featured Internships
 ###Google
@@ -88,6 +101,7 @@ An internship at Google allows you to develop the products and tools of the futu
 ####How to Apply:
 <https://careers.google.com/stories/applying-to-google/>
 
+<br>
 
 ##Where to practice
 ###Hackerrank
@@ -108,8 +122,10 @@ A website that helps you prepare for the technical portion of a job interview.
 
 Website link: <https://leetcode.com/>
 
+<br>
+
 ##More resources
-###Github Education Pack
+###GitHub Education Pack
 There's no substitute for hands-on experience. But for most students, real world tools can be cost-prohibitive. Apply for this pack and receive excellent tools at a great discount. 
 
 Website Link: <https://education.github.com/pack>
@@ -118,6 +134,8 @@ Website Link: <https://education.github.com/pack>
 
 A GitHub repository of carefully curated content to help you ace your next technical interview, with a focus on algorithms.
 Repo Link: <https://github.com/yangshun/tech-interview-handbook>
+
+<br>
 
 ##Where to learn
 ###📚 Cracking the Coding Interview
